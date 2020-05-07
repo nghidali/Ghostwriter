@@ -65,3 +65,22 @@ python run_pplm.py -D sentiment --class_label 2 --cond_text "My dog died" --leng
 
 
 The discriminator and the GPT-2 model in the root directory are different from those used for the analysis in the paper. Code and models corresponding to the paper can be found [here](https://github.com/uber-research/PPLM/tree/master/paper_code).
+
+### Making a custom discriminator
+
+1. Create a tab separated text file with the emotional label and the text on each line ex: "3\thello I'm Natalie\n4\tI'm so happy\n"
+2. Rename this as a tsv, for example natOutput.tsv
+3. run the following to generate a bunch of files, the ones we use are "generic_classifier_head_epoch_10.pt" and "generic_classifier_head_meta.json"
+```bash
+python3 run_pplm_discrim_train.py --dataset generic --dataset_fp natOutput.tsv --cached --save_model
+```
+4. Now we will plug this into our pplm model as so
+```bash
+python3 run_pplm.py -D generic --discrim_weights "generic_classifier_head_epoch_10.pt" --discrim_meta "generic_classifier_head_meta.json" --class_label 4 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+```
+
+### Running Nat's DailyDialog discriminator
+```bash
+python3 run_pplm.py -D generic --discrim_weights "emotion.pt" --discrim_meta "emotion.json" --class_label 4 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+```
+The class label is  { 0: no emotion, 1: anger, 2: disgust, 3: fear, 4: happiness, 5: sadness, 6: surprise}
