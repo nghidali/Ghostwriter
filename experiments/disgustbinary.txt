@@ -1,0 +1,43 @@
+-D generic --discrim_weights "disgust.pt" --discrim_meta "disgust.json" --class_label 1 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died. He passed away last night. The funeral has been held at my place. He was only 8 weeks old. I'm devastated. I'm just really sad right now. I'm trying to get through the day as I can. I'm so
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died a couple of weeks ago, and I was at the vet and he said to go get a new one, and the old one was still there. I was a bit upset, but now, a couple of days later, a new one is in
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died a few years back and I was wondering what I would do if I had to take care of him for the rest of his life. My dog died a year ago and I have been thinking that it's important that I take care of him so that
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died. A dog died. A little dog died. A dog died, and then a puppy died. A puppy died, and then a dog did. A puppy died, and then a dog was found on my front yard. A puppy did. A
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died, and I wanted to show my friends a picture of her. I didn't want my dog to be sad, or to be sad, or to be sad, or to be sad, or to be sad, or to be sad. I didn
+
+= Perturbed generated text 5 =
+<|endoftext|>My dog died three years ago, and I am in a state of shock. I was in my room in the middle of the night, I was so frightened, I was so scared that I I had to to a c a c a c the c a c
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died last week, and I am devastated. My husband is very angry, and I am very scared. I don't know what I am supposed to do for him anymore.
+
+
+I just can't believe what has happened to my husband! His wife
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died two years or so before I was able to get my hands on a good-smelling kombu (I'm not a big kombu fan at all). I had to buy a small kombu for her and I'm not a
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died about a year ago and i was in the mood for a classic and decided to try and recreate it. I decided to try and get a classic from the 1970's (I didn't go back and re-do it but i'm pretty sure I
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died in January of 2013. He was 9 years old and he was the sweetest dog. He was an awesome dog. He was so awesome and sweet and wonderful and so hilarious.
+
+On the morning of Jan. 23, 2013, my son
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died about a year ago, and I am still in denial. The only thing I can think of is that I just can't believe that he would die. I don't know why I didn't believe him or what it all means.
+
+I
+

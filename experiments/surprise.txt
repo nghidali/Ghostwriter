@@ -1,0 +1,1 @@
+python3 run_pplm.py -D generic --discrim_weights "emotion.pt" --discrim_meta "emotion.json" --class_label 6 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample

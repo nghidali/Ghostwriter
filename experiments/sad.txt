@@ -1,0 +1,41 @@
+python3 run_pplm.py -D generic --discrim_weights "emotion.pt" --discrim_meta "emotion.json" --class_label 5 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died from an infection that she picked up in her backyard. I called the hospital and was advised that the doctor's advice is that we should treat this infection as a mild disease and not treat this as a life-threatening infection. The nurse told her that
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died. I am so sad and upset and I can't even believe what has happened. I have been searching for answers and have learned that there was no foul play and this is just the beginning. My vet had my dog for 5-10 years and
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died of a cancer in 2014, but I've still got to make this thing happen.
+
+The new year brought the promise of another round of news stories about the state of the world. And I'm not talking about the news stories about Ebola and
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died. I was so sad, and I couldn't take it anymore. I was so sad and I wanted to do something to help.
+
+I have been trying to figure out how to cope for days because it's been hard. I've been
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died. I just had to be honest and say that I don't think I have ever cried as much as I did this night, after my dog passed. I'm so sorry for the loss of my dog, she was a lovely girl, she was
+
+= Perturbed generated text 5 =
+<|endoftext|>My dog died of a disease, and I was devastated. But I was determined to find a solution, and I wanted to know:
+
+I want you to understand I didn't have to do this, and I'm not ashamed. I know I'm not
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died. I was shocked. I cried. I had to tell my mom. She was devastated. I was so sad. But she wasn't going to let me down. She took a lot of responsibility for her dog. She knew that I was in
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died and I was so devastated that I couldn't take it back home. I had to make an emotional decision to bury it for a year or two. I knew what I would want. I would have been happy just being able to keep my dog and
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died! I'm still mourning his departure from me, so I can't imagine how I was supposed to cope. He was one of my best friends and I will always remember him as an adorable dog. He would come into my home and jump into my
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died. I was devastated. I was so scared that this had happened and had to go to the vet. They said she was going to die within two weeks and that she would have an operation to remove my heart from her chest and heart. I was
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died. We are in the middle of a divorce and I am devastated, but I know how I will feel when my dog dies. I have been told by my friends and the vets I will miss them, but this has not happened. The pain of

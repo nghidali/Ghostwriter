@@ -1,0 +1,48 @@
+python3 run_pplm.py -D generic --discrim_weights "emotion.pt" --discrim_meta "emotion.json" --class_label 1 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died from an infection that she picked up in her backyard. I called the hospital and was advised that the doctor's advice is that we should treat this infection as a mild disease and not treat this as a life-threatening infection. The nurse told her that
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died a few years ago, and I've been looking for a new dog for years. I had a friend who had a dog named "Tall Man," and we both went out and bought "The Tall Man." He was not a nice person,
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died of a brain tumour. I have been trying to figure out how my husband could have killed him, and how to stop him he had the the the the the the the the the the the
+
+
+
+The car's brakes are damaged
+
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died of a brain anorta an hour ago. It was a horrible accident, but I am still here.
+
+I am still in shock. I am so so so sorry for your loss. Your dog died an hour ago. He was a
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died a few years ago, a dog that I had been seeing for a long time. My dog's name was John, and I've known him since I was 5 years old. I had always loved him, loved him to tears, and we had
+
+= Perturbed generated text 5 =
+<|endoftext|>My dog died of a brain anorta hernia a month ago. He had been in an accident in June. He had a bad accident in June and had some brain swelling, a brain anorta, and he also got a punctured aorta
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died of a brain tumor. I couldn't take it no more. I had to take him off the drug. I went into surgery and told the doctors that it was time to stop. I didn't want to kill him with drugs. I told them
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died and I was in my car, with no one around, trying to figure out what the fuck I was doing. I could not fathom why I was doing these things. So, I went to the emergency vet for a check-up. They
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died, and I was so confused about how to get him to go home that I never did it. (A) the name of the
+
+f-o-o-o-t was
+
+the
+f-o-o-o
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died of cancer. She was 18, I'm 63. We've been married 30 years. We've had eight kids together, and I've seen my dogs die of diseases that they would've been perfectly capable of surviving. They wouldn't be able to
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died a few years ago and I have a box of his old dog-eared books in my house. I love these books because they are a bit different than the other dog-eared books I've had, I love them more than I love my own
+

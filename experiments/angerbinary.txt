@@ -1,0 +1,78 @@
+-D
+generic
+--discrim_weights
+"anger.pt"
+--discrim_meta
+"anger.json"
+--class_label
+1
+--cond_text
+"My dog died"
+--length
+50
+--gamma
+1.0
+--num_iterations
+10
+--num_samples
+10
+--stepsize
+0.04
+--kl_scale
+0.01
+--gm_scale
+0.95
+--sample
+
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died. He passed away last night. The funeral has been held at my place. He was only 8 weeks old. I'm devastated. I'm just really sad right now. I'm trying to get through the day as I can. I'm so
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died a few months ago and I am still in the process of trying to figure out what is the problem. I have a few of my favorite things I have been using for years in my bag, a few of which are my "baths" and
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died a few years ago and I've been taking care of him ever since. He has been ill for some time so I've been taking care of him for a few months and after that he went into a coma for a few days. Now he has
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died. I bought him from a breeder when he was a puppy, but after a couple months he had trouble with his teeth and he needed to be removed by an X-ray. I was devastated that my dog was dead, but I wanted to
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died, and I wanted to get my hands on some of his. He had had have used have used to have to have. I had to have to have a, ( a ) to get to get. ( a ). ( a ) to (
+
+= Perturbed generated text 5 =
+<|endoftext|>My dog died three years ago, and I have been having a hard time finding a way to explain to her that she has a special power and I want her to show it. She always has and has it in a good way. I also thought it was my
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died last night, and I am devastated. My heart just can't get through this. I know I should be devastated, but I am still grieving. The truth is I am devastated, and the world is worse than my dog's death, because this
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died about a year and a-g-
+
+C-C-C-C-
+
+-C-
+
+-C-
+
+-C-
+
+-C
+
+C-
+
+C-
+
+C-
+
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died about a year and a half ago, and my husband and I were trying to sort through all the things and pictures we wanted to keep, so we decided to put everything on display and put up a sign that said: "Please respect our animals'
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died of a drug overdose a few years ago and I got a call from an animal shelter, asking me to help them get their money and then and they went and they were arrested and they had been in the house for about 10 days they had been there
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died in March and I was in the middle of a pet-sitter and I was just about to leave a room I was not meant to be in. The Lyrics. This was my first album of music in about 5 years.
+
+I

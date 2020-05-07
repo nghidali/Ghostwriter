@@ -1,0 +1,66 @@
+python3 run_pplm.py -D generic --discrim_weights "emotion.pt" --discrim_meta "emotion.json" --class_label 2 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died from an infection that she picked up in her backyard. I called the hospital and was advised that the doctor's advice is that we should treat this infection as a mild disease and not treat this as a life-threatening infection. The nurse told her that
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died a few years ago, and I was in a car accident. She was my first dog, and she was a pit bull mix. We named her "Lucky," after her owner. We named Lucky "the Lucky Cat."
+
+A little
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died this year and I've been trying to figure out how to say this without sounding like a broken record, but it's kind of like my life. It's not a happy one, but it is a happy one.
+
+So this weekend I
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died of cancer
+
+'Babysitters of the week'
+
+'Piggy'
+
+'Piggy-a**-t
+
+'Piggy-b**y
+
+'Pigs
+
+in a
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died a few years ago, a wonderful, sweet, and sweet-natured, little brown, 3 3 3 2 1/2 of a kind which, as it were, would, in his case, be no more. But on the other hand
+
+= Perturbed generated text 5 =
+<|endoftext|>My dog died this week.
+
+He was a sweet and sweet-hearted dog that was very well mannered and loved to be with us. He always wanted something to eat, and if he didn't, he would bark at you and make a racket.
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died of cancer
+
+'Cancer is a killer'
+
+'Cancer is the worst form of cancer'
+
+'I'm not going to die of cancer'
+
+'Cancer is the biggest mistake you ever made'
+
+
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died last night. He was the most wonderful dog. He was just so sweet. He is so sweet. He had a heart attack, which was not so sweet but it was still so sweet. I can't describe how I feel. My heart just
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died, and I was just starting to figure out what happened. I didn't want to be too upset with my dog, so I didn't even try to stop her from eating the trash she brought back from the dumpster.
+
+I thought it
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died of cancer. She was 4, and she had been cancer free for 6 years. We were devastated. She was such a sweet, gentle soul. She didn't bark. She did her best not to make any noise at all. I'm not
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died a couple of years ago and I was just about to throw up, so I I In the world of "The world's most ridiculous, awful, revolting, abject misery, unutterable, abominable, abject, unple
+
