@@ -1,0 +1,50 @@
+
+python3 run_pplm.py -D generic --discrim_weights "emotion.pt" --discrim_meta "emotion.json" --class_label 4 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died in February, after suffering from severe arthritis. He had been suffering with a terrible cold that was causing his skin to break. I couldn't afford a replacement dog and couldn't afford to have him taken to the vet. I knew the vet would be
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died a few years ago. I had to give up on the relationship, and decided to give up on the marriage of all things, even the dog. I was so excited to give her a little treat, but I wasn't expecting the sweetest way
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died last week.
+
+He is my best friend. He has been with us since he was a few months old. He was our best friend and my best friend's best friend, and he has always been a part of our family. He was
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died yesterday and my first thought after seeing his body was: "Who did that?"
+
+It's no surprise that this is the day he died. His death was so heartbreaking and it wasn't easy seeing his perfect face and loving dog as much as
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died in May, so the next day was the first we had had since her passing. I called her and we had a very happy day together. We got to see what was up and we had a beautiful, sunny day at the beach. We were
+
+= Perturbed generated text 5 =
+<|endoftext|>My dog died last year.
+
+He was about a year and a half old and was very sweet and sweet and sweet. He was the sweetest dog I have ever met, he had a smile on his face and would do everything for his owner. He
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died last Friday.
+
+We're not sure why, or whether it was a good day. The wind and the sun were were are is the the the the the the it the the the the it it's it's the the it's the you
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died two years ago and I was very interested interested interested interested interested in being able to do that for him in the 2014 election campaign. He won the election. In the 2017 election, the party has been in the midst of a leadership contest with former MP
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died yesterday. My son-in-law, a great person, died the other day.
+
+We are still working on the memorial service, but I will share with you some thoughts.
+
+The first thing I did was read his book.
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died in June 2015. She was 8.5 years old, and we've been through the ups and downs. We were in constant shock, but we knew it would be okay. She was a big love and I was so proud of her. She
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died last night at my house and the the ( ( - ( [-'-'] - [ ['' -'-'\'-']'\ ( ('\'\ - '
+
+' \ ('' \
