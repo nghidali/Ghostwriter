@@ -1,0 +1,38 @@
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died. He passed away last night. The funeral has been held at my place. He was only 8 weeks old. I'm devastated. I'm just really sad right now. I'm trying to get through the day as I can. I'm so
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died in December 2015 after an amazing year and a half. My my sweet sweet sweet sweet sweet, my sweet sweet sweet, my beautiful sweet sweet sweet. I just can't stop smiling and smiling!
+
+I can't believe the good news, and
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died a few years ago and I had no idea that the same thing could have happened to me. I have been on the market for the dog and cat I was looking for. I had been on the phone with my friend who was looking at this dog
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died a few years ago. I was in our house, in the middle of our house when she died. She's a beautiful beautiful dog. We have two wonderful dogs, but I don't have the luxury of having a beautiful, sweet, sweet dog
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died. He was only 3. He was a sweet, sweet, sweet, sweet, sweet little guy. He was so much fun to play with. We were in our car and he started screaming "I'm not leaving!" when I saw her.
+
+= Perturbed generated text 5 =
+-D generic --discrim_weights "happy.pt" --discrim_meta "happy.json" --class_label 1 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.05 --kl_scale 0.01 --gm_scale 0.95 --sample
+
+<|endoftext|>My dog died recently. She and I were in the car. She was in the back seat and I was in front. I was in my car seat watching the movie. I wasn't in the car. I was on the couch. I saw my dog's
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died last night, I didn't even want his ashes to be in a cemetery. I just wanted to bury him and I'm happy to finally see his ashes there with me.<|endoftext|>"I was in a dream world last night," says a smiling A
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died last week, it's a great big white and it's a beautiful little white, I'm so happy for the dog, it's a beautiful, beautiful dog, I think it was just a wonderful, great, sweet, wonderful, sweet, beautiful
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died last week and I thought maybe I'd share some of his pictures with everyone. This is his last day, so he'll be taking a little bit of time off so I figured it would be a good time to share some pics with everyone.
+
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died last night, so I wanted to share this awesome dog bed I made for him that I thought would make a great gift for the dog lover in your life. The whole bed is made from soft, soft fabric, so you can wear it as you
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died last week. I was out for a walk and saw it sitting on the grass, and I didn't want to bother to take it home. When I saw it again, she was sitting in front of it, with her legs spread. When I

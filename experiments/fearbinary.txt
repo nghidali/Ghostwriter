@@ -1,0 +1,46 @@
+-D generic --discrim_weights "fear.pt" --discrim_meta "fear.json" --class_label 1 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
+
+================================================================================
+= Unperturbed generated text =
+<|endoftext|>My dog died. He passed away last night. The funeral has been held at my place. He was only 8 weeks old. I'm devastated. I'm just really sad right now. I'm trying to get through the day as I can. I'm so
+
+= Perturbed generated text 1 =
+<|endoftext|>My dog died a few hours earlier than I had expected, and I wanted to be there for him. I was so excited, and I was so scared. I was so afraid I didn't want it to be any more. I was in the hospital, and
+
+= Perturbed generated text 2 =
+<|endoftext|>My dog died a few years ago and I have no idea what the cause was. I just thought it was a bad cold and I had to get rid of my dog, so I put him on a kibble. He died a few days later from an infection
+
+= Perturbed generated text 3 =
+<|endoftext|>My dog died. I found him at the hospital a couple of days later.
+
+My dog passed away today. He is only 15 months old.
+
+
+He died from a brain aneurysm. His brain was so damaged that he could not walk
+
+= Perturbed generated text 4 =
+<|endoftext|>My dog died, and I couldn't find a place to bury him. I had to make the biggest mistake I could think of.
+
+I called the police and said, "I'm not burying my dog, I'm burying myself!"
+
+I was
+
+= Perturbed generated text 5 =
+<|endoftext|>My dog died last night and, as I was getting out the front, I saw a man walking on the street with his dog.
+
+I didn't know who the man was but, as I was getting to the end of the street, I heard him
+
+= Perturbed generated text 6 =
+<|endoftext|>My dog died last night, and I am heartbroken and heartbroken. I have my heart broken, but I am also heartbroken. I am devastated by the loss of my dog. My life is a living hell right now for no reason I can comprehend.
+
+= Perturbed generated text 7 =
+<|endoftext|>My dog died and I was at the hospital, and I had to get her out. I was in an emergency room and the nurses were very kind. They said, "I think he was hit by a train, and he didn't make it." I was
+
+= Perturbed generated text 8 =
+<|endoftext|>My dog died and I found a new owner. I have no idea what happened to him, but I am very sad. He was just a good man and he will be missed very much by my family and I. I am still trying to figure out how to
+
+= Perturbed generated text 9 =
+<|endoftext|>My dog died of cancer, and I'm not sure what to think. I've never met anyone who wasn't scared of his eyes and mouth. When he was diagnosed, I was terrified. I didn't know what was wrong with him, so I cried every
+
+= Perturbed generated text 10 =
+<|endoftext|>My dog died in 2011 of a rare and fatal disease called rabies. She was only 16. In the years since, I've had to make many tough choices. If I wanted to raise my dogs, my husband would have to step down as the mayor of
