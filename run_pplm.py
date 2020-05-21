@@ -38,6 +38,13 @@ from transformers.modeling_gpt2 import GPT2LMHeadModel
 
 from pplm_classification_head import ClassificationHead
 
+
+### Christine
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
+from web_scrape import scrape_thesaurus
+
 PPLM_BOW = 1
 PPLM_DISCRIM = 2
 PPLM_BOW_DISCRIM = 3
@@ -834,6 +841,10 @@ def run_pplm_example(
             print("= Perturbed generated text {} =".format(i + 1))
             print(pert_gen_text)
             print()
+
+            # saves output to text file: 'samples.txt'
+            load_words_in_text_file(pert_gen_text)
+
         except:
             pass
 
@@ -841,6 +852,54 @@ def run_pplm_example(
         generated_texts.append(
             (tokenized_cond_text, pert_gen_tok_text, unpert_gen_tok_text)
         )
+
+    scrape_thesaurus("scared")
+
+    return
+
+"""
+
+Put outputs on a text file
+
+"""
+
+def load_words_in_text_file(text):
+
+    # load words into text file
+    f = open("samples.txt","a+")
+
+    words = text.split("<|endoftext|>")
+    if '<|endoftext|>' in words:
+        words.remove('<|endoftext|>')
+
+    s = ""
+    text = s.join(words)
+
+    remove_words = ['[31m', '[0m']
+
+    words = text.split(remove_words[0])
+    if remove_words[0] in words:
+        words.remove(remove_words[0])
+
+    s = ""
+    text = s.join(words)
+
+    words = text.split(remove_words[1])
+    if remove_words[1] in words:
+        words.remove(remove_words[1])
+
+    s = ""
+    text = s.join(words)
+    lines = text.split('\n')
+
+    f.seek(0)
+    data = f.read(100)
+    if len(data) > 0:
+        f.write('\n')
+
+    f.write(lines[0])
+    f.write('\n')
+    f.close()
 
     return
 
