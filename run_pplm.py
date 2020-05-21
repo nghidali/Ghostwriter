@@ -39,12 +39,6 @@ from transformers.modeling_gpt2 import GPT2LMHeadModel
 from pplm_classification_head import ClassificationHead
 
 
-### Christine
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-
-from web_scrape import scrape_thesaurus
-
 PPLM_BOW = 1
 PPLM_DISCRIM = 2
 PPLM_BOW_DISCRIM = 3
