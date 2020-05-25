@@ -39,6 +39,12 @@ from transformers.modeling_gpt2 import GPT2LMHeadModel
 from pplm_classification_head import ClassificationHead
 
 
+#import os
+#os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+
+from semantic_similarity import get_most_similar
+
+
 PPLM_BOW = 1
 PPLM_DISCRIM = 2
 PPLM_BOW_DISCRIM = 3
@@ -847,7 +853,12 @@ def run_pplm_example(
             (tokenized_cond_text, pert_gen_tok_text, unpert_gen_tok_text)
         )
 
-    scrape_thesaurus("scared")
+    input_text = tokenizer.decode(tokenized_cond_text)
+
+    print("------------------ input: {} -----------------".format(input_text))
+
+    get_most_similar(input_text)
+    #scrape_thesaurus("scared")
 
     return
 
