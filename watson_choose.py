@@ -17,11 +17,13 @@ api_key = "zMJdye9Ex8FZe1HomlcLkGoVSEuqakSCgB1QYIlcTmPO"
 
 
 def main():
-    # in_dial = open('samples.txt', 'r')
-    print(get_text_sentiment("I am feeling great today!"))
+    in_dial = open('samples.txt', 'r')
+    dialogue_tones = []
+    for sentence in in_dial:
+        tone = get_text_sentiment(sentence)
+        dialogue_tones.append(tone)
 
-def classify():
-    return {'happy': 0.5, 'sad': 0.2, 'angry': 0.3}
+    print(dialogue_tones)
 
 
 def get_text_sentiment(text):
@@ -31,7 +33,7 @@ def get_text_sentiment(text):
 
     tone_analyzer.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
 
-    return tone_analyzer.tone(text)
+    return tone_analyzer.tone(text).result['document_tone']['tones']
 
 if __name__ == '__main__':
     main()
