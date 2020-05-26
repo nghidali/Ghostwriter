@@ -52,9 +52,9 @@ if __name__ == "__main__":
     )
     parser.add_argument('--sentence', type=str, default='I am so happy!',
                         help='Sentence to input')
-    parser.add_argument('--discrim_weights', type=str, default='emotion.pt',
+    parser.add_argument('--discrim_weights',"-W", type=str, default='emotion.pt',
                         help='Weights for the generic discriminator')
-    parser.add_argument('--discrim_meta', type=str, default='emotion.json',
+    parser.add_argument('--discrim_meta',"-ME", type=str, default='emotion.json',
                         help='Meta information for the generic discriminator')
 
     args = parser.parse_args()
