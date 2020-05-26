@@ -8,86 +8,79 @@ using code from https://nlpforhackers.io/wordnet-sentence-similarity/
 from nltk.corpus import wordnet as wn
 from nltk import word_tokenize, pos_tag
 import numpy as np
+from nltk.tokenize import RegexpTokenizer
+from nltk.corpus import stopwords
+
+def get_pos(sentence):
+    stop_words = set(stopwords.words('english'))
+
+    tokenizer = RegexpTokenizer(r'\w+')
+    word_tokens = tokenizer.tokenize(sentence)
+
+    filtered_sentence = pos_tag([w for w in word_tokens if not w in stop_words])
+
+    results = []
+
+    for item in filtered_sentence:
+        start = item[1][0].lower()
+        if start == 'n':
+            results.append((item[0], start))
+        if start == 'v':
+            results.append((item[0], start))
+
+    return results
+
+def get_synsets(sentence):
+    synsets_lst = []
+    for item in sentence:
+        print(item)
+        if len(item) > 1:
+            print("hi")
+            print(wn.synsets(item[0], item[1]))
+            synset = wn.synsets(item[0], item[1])
+            if len(synset) > 0:
+                synsets_lst.append(synset[0])
+                print(synset)
+
+    return synsets_lst
 
 
+def get_similarity(sent1, sent2):
+    sentence1 = get_pos(sent1)
+    sentence2 = get_pos(sent2)
 
-def penn_to_wn(tag):
-    #Convert between a Penn Treebank tag to a simplified Wordnet tag
-    if tag.startswith('N'):
-        return 'n'
+    synsets1 = get_synsets(sentence1)
+    #s = [tagged_word for tagged_word in sentence1]
+    #print(s)
+    synsets2 = get_synsets(sentence2)
 
-    if tag.startswith('V'):
-        return 'v'
+    total = 0
+    count = 0
 
-    if tag.startswith('J'):
-        return 'a'
+    for word in synsets1:
 
-    if tag.startswith('R'):
-        return 'r'
+        similarity = ([word.path_similarity(s) for s in synsets2])
 
-    return None
+        # remove Nones
+        similarity = [i for i in similarity if isinstance(i, (int, float))]
 
-def tagged_to_synset(word, tag):
-    wn_tag = penn_to_wn(tag)
-    if wn_tag is None:
-        return None
-
-    try:
-        return wn.synsets(word, wn_tag)[0]
-    except:
-        return None
+        total += sum(similarity)
+        count += 1
 
 
-def sentence_similarity(sentence1, sentence2):
-    #compute the sentence similarity using Wordnet
-    # Tokenize and tag
-    sentence1 = pos_tag(word_tokenize(sentence1))
-    sentence2 = pos_tag(word_tokenize(sentence2))
+    #print('\n')
+    #print(sent1)
+    #print("---------------------")
+    #print(sent2)
 
-    #print(sentence2)
+    #print('\n -------------------- \n')
+    #print(total/count)
 
-    # Get the synsets for the tagged words
-    synsets1 = [tagged_to_synset(*tagged_word) for tagged_word in sentence1]
-    synsets2 = [tagged_to_synset(*tagged_word) for tagged_word in sentence2]
+    return total/count
 
-    #print("2 {}".format(synsets2))
-
-    # Filter out the Nones
-    print('before')
-    print(synsets1)
-    print(synsets2)
-
-    synsets1 = [ss for ss in synsets1 if ss]
-    synsets2 = [ss for ss in synsets2 if ss]
-
-
-    score, count = 0.0, 0
-
-    # For each word in the first sentence
-    for synset in synsets1:
-
-        # Get the similarity value of the most similar word in the other sentence
-        scores = [synset.path_similarity(ss) for ss in synsets2]
-        scores = [s for s in scores if s]
-
-        if len(scores) == 0:
-            return 0
-
-        best_score = max(scores)
-
-
-        # Check that the similarity could have been computed
-        if best_score is not None:
-            score += best_score
-            count += 1
-
-    # Average the values
-    if count == 0:
-        return 0
-
-    score /= count
-    return score
-
+"""
+run program
+"""
 
 def get_most_similar(focus_sentence):
     f = open("samples.txt")
@@ -97,9 +90,11 @@ def get_most_similar(focus_sentence):
 
     for line in f:
 
-        similarities.append(sentence_similarity(focus_sentence, line))
+        print("\n \n SAMPLE {}: \n \n".format(line))
+
+        similarities.append(get_similarity(focus_sentence, line))
         sentences.append(line)
 
-        idx = np.argmax(similarities)
+    idx = np.argmax(similarities)
 
-    print("\n \n ------------- most similar: {} ------------".format(sentences[idx]))
+    print("\n \n ------------- most similar: {} ------------ \n \n".format(sentences[idx]))
