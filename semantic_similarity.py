@@ -33,10 +33,7 @@ def get_pos(sentence):
 def get_synsets(sentence):
     synsets_lst = []
     for item in sentence:
-        print(item)
         if len(item) > 1:
-            print("hi")
-            print(wn.synsets(item[0], item[1]))
             synset = wn.synsets(item[0], item[1])
             if len(synset) > 0:
                 synsets_lst.append(synset[0])
@@ -50,8 +47,6 @@ def get_similarity(sent1, sent2):
     sentence2 = get_pos(sent2)
 
     synsets1 = get_synsets(sentence1)
-    #s = [tagged_word for tagged_word in sentence1]
-    #print(s)
     synsets2 = get_synsets(sentence2)
 
     total = 0
@@ -68,14 +63,6 @@ def get_similarity(sent1, sent2):
         count += 1
 
 
-    #print('\n')
-    #print(sent1)
-    #print("---------------------")
-    #print(sent2)
-
-    #print('\n -------------------- \n')
-    #print(total/count)
-
     return total/count
 
 """
@@ -84,17 +71,21 @@ run program
 
 def get_most_similar(focus_sentence):
     f = open("samples.txt")
+    lines = f.readlines()
+    i = 1
 
     similarities = [] # holds all the similarity percentages that we calculate
     sentences = []
 
-    for line in f:
-
-        print("\n \n SAMPLE {}: \n \n".format(line))
-
-        similarities.append(get_similarity(focus_sentence, line))
-        sentences.append(line)
+    for line in lines:
+        if line[0] != '\n':
+            print("\n \n SAMPLE {} ... {}: \n \n".format(i, line))
+            similarities.append(get_similarity(focus_sentence, line))
+            sentences.append(line)
+            i+=1
 
     idx = np.argmax(similarities)
 
     print("\n \n ------------- most similar: {} ------------ \n \n".format(sentences[idx]))
+
+    return similarities # return list
