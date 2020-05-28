@@ -3,3 +3,6 @@ nltk
 colorama
 transformers
 torchtext
+numpy
+ibm_watson
+ibm_cloud_sdk_core
