@@ -25,9 +25,9 @@ def driver(output_file, input_file, emotion, grammar_weight, semantic_weight, sa
 
     # get weights
     grammar_result = get_grammar(output_file)
-    grammar_weights =  grammar_weight * [i[0] for i in grammar_result]
-    semantic_weights = semantic_weight * get_most_similar(input)
-    sa_weights = sa_weight * choose_best_emotion(output_file, emotion)
+    grammar_weights =  [grammar_weight * i[0] for i in grammar_result]
+    semantic_weights = [i * semantic_weight for i in get_most_similar(input)]
+    sa_weights = [i * sa_weight for i in choose_best_emotion(output_file, emotion)]
     total = []
 
     # sum weights
@@ -38,6 +38,9 @@ def driver(output_file, input_file, emotion, grammar_weight, semantic_weight, sa
         total.append(grammar_weights[i] + semantic_weights[i] + sa_weights[i])
 
     idx = np.argmax(total)
+
+    print("\n --------------- Scores: {}".format(total))
+    print("\n ---------------- Weights: {} ... {} ... {}".format(grammar_weight, semantic_weight, sa_weight))
 
     print("\n \n ---------------------- index {} ... RESULT {} ----------------------------\n \n".format(idx, lines[idx]))
 
@@ -62,15 +65,15 @@ if __name__ == '__main__':
         help="One of: anger, fear, joy, sadness, analytical, confident, tentative"
     )
     parser.add_argument(
-        "--grammar_weight", type=int, default= 1,
+        "--grammar_weight", type=float, default= 1,
         help="weight of grammarbot"
     )
     parser.add_argument(
-        "--semantic_weight", type=int, default=1,
+        "--semantic_weight", type=float, default=0.9,
         help="weight of semantic similarity"
     )
     parser.add_argument(
-        "--sa_weight", type=int, default=1,
+        "--sa_weight", type=float, default=0.8,
         help="weight of sentiment analysis"
     )
     args = parser.parse_args()
