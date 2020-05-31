@@ -39,10 +39,12 @@ from transformers.modeling_gpt2 import GPT2LMHeadModel
 from pplm_classification_head import ClassificationHead
 
 
-#import os
-#os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 from semantic_similarity import get_most_similar
+from grammar import get_grammar
+from driver import driver
 
 
 PPLM_BOW = 1
@@ -854,19 +856,59 @@ def run_pplm_example(
         )
 
     input_text = tokenizer.decode(tokenized_cond_text)
+    words = input_text.split("<|endoftext|>")
+    if '<|endoftext|>' in words:
+        words.remove('<|endoftext|>')
+    s = ""
+    input_text = s.join(words)
+
+    emotion = get_emotion(tokenizer.decode(class_label))
+
+    #0: no emotion, 1: anger, 2: disgust, 3: fear, 4: happiness, 5: sadness, 6: surprise
+
+    f = open("input.txt", "w+")
+    f.write(input_text)
+    f.write('\n')
+    f.write(emotion)
+    f.close()
 
     print("------------------ input: {} -----------------".format(input_text))
 
-    get_most_similar(input_text)
+    driver()
+    #get_grammar("samples.txt")
+    #get_most_similar(input_text)
     #scrape_thesaurus("scared")
 
-    return
+    #return
+
+
+"""
+
+get emotion
+
+"""
+def get_emotion(input):
+    if (input == 1):
+        return "anger"
+    if (input == 2):
+        return "anger"
+    if (input == 3):
+        return "fear"
+    if (input == 4):
+        return "joy"
+    if (input == 5):
+        return "sadness"
+    if (input == 6):
+        return "tentative"
+    return "joy"
+
 
 """
 
 Put outputs on a text file
 
 """
+
 
 def load_words_in_text_file(text):
 
@@ -903,7 +945,7 @@ def load_words_in_text_file(text):
         f.write('\n')
 
     f.write(lines[0])
-    f.write('\n')
+    #f.write('\n')
     f.close()
 
     return
