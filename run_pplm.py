@@ -872,11 +872,6 @@ def run_pplm_example(
     f.write(emotion)
     f.close()
 
-    print("------------------ input: {} -----------------".format(input_text))
-
-    #get_most_similar(input_text)
-    #scrape_thesaurus("scared")
-
     return
 
 """

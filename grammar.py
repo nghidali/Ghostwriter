@@ -13,7 +13,6 @@ To run the program, uncomment the last line at the bottom
 # The boolean indicates whether the line is complete or not based on punctuation
 def get_grammar(file):
     client = GrammarBotClient()
-    print("\n scores : {} \n".format(scoreAll(file, client)))
     return scoreAll(file, client)
 
 

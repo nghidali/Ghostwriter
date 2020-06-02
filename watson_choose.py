@@ -19,7 +19,6 @@ def choose_best_emotion(text_file, emotion):
             tone = get_text_sentiment(sentence)
             dialogue_tones.append(tone)
             sentences.append(sentence)
-    print(dialogue_tones)
     best_sentence = -1
     best_score = 0
     scores = np.zeros(len(sentences))
@@ -27,14 +26,14 @@ def choose_best_emotion(text_file, emotion):
         for sentiment in range(len(dialogue_tones[sentence])):
             el = dialogue_tones[sentence][sentiment]
             if el['tone_id'] == target_emotion:
-                print(sentences[sentence], el['score'])
                 scores[sentence] = el['score']
                 if el['score'] > best_score:
                     best_score = el['score']
                     best_sentence = sentences[sentence]
 
-    print('The winner is:', best_sentence)
-    print(scores)
+    print('\n \n The winner is:', best_sentence)
+    print('\n \n emotion: {} \n \n'.format(emotion))
+
     return scores
 
 
