@@ -40,7 +40,7 @@ from pplm_classification_head import ClassificationHead
 
 
 import os
-os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+#os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 #from semantic_similarity import get_most_similar
 
