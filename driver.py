@@ -9,19 +9,20 @@ from watson_choose import choose_best_emotion
 
 #def driver(output_file, input_file, emotion, grammar_weight, semantic_weight, sa_weight):
 def driver(output_file, input, emotion, grammar_weight, semantic_weight, sa_weight):
-    # get inputs
-    #inputs = open(input_file).readlines()
-    #input = inputs[0]
-    #emotion = inputs[1]
+
+    # remove words after end of sentence
+    clean_up_samples(output_file)
+
+    file = "clean_samples.txt"
 
     # open samples
-    f = open(output_file)
+    f = open(file)
     lines = f.readlines()
     lines = list(filter(lambda line : line != '\n', lines))
 
 
     # get weights
-    grammar_result = get_grammar(output_file)
+    grammar_result = get_grammar(file)
     grammar_weights =  [grammar_weight * i[0] for i in grammar_result]
     semantic_weights = [i * semantic_weight for i in get_most_similar(input)]
     sa_weights = [i * sa_weight for i in choose_best_emotion(output_file, emotion)]
@@ -31,8 +32,7 @@ def driver(output_file, input, emotion, grammar_weight, semantic_weight, sa_weig
     norm_semantic_weights = [i/max(semantic_weights) for i in semantic_weights]
     norm_grammar_weights = [i/max(grammar_weights) for i in grammar_weights]
 
-    #print('grammar weights: {} \n \n'.format(grammar_weights))
-    #print('semantic weights: {} \n \n'.format(norm_semantic_weights))
+    print('\n \n weights : {} .. {} .. {} \n \n'.format(norm_sa_weights, norm_semantic_weights, norm_grammar_weights))
 
 
     total = []
@@ -52,6 +52,39 @@ def driver(output_file, input, emotion, grammar_weight, semantic_weight, sa_weig
     print("\n \n ---------------------- index {} ... BEST RESULT {} ----------------------------\n \n".format(idx, lines[idx]))
 
     return lines[idx]
+
+"""
+remove words after end of sentence
+"""
+def check_sample(line):
+        line = line.strip()
+
+        if line.endswith('.'):
+            return line
+        elif line.endswith('!'):
+            return line
+        elif line.endswith('?'):
+            return line
+        else:
+            new_line = line.split()
+            if len(new_line) == 0:
+                return 0
+            new_line.pop()
+            s = " "
+            text = s.join(new_line)
+            return check_sample(text)
+
+def clean_up_samples(file):
+    file = open(file)
+    new_file = open("clean_samples.txt", "w+")
+
+    lines = file.readlines()
+
+    for line in lines:
+        cleaned = check_sample(line)
+        if cleaned != 0:
+            new_file.write(cleaned)
+            new_file.write('\n')
 
 
 
