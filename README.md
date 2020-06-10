@@ -90,7 +90,9 @@ The class label is  { 0: no emotion, 1: anger, 2: disgust, 3: fear, 4: happiness
 When running PPLM, the user decides how many samples to output. Not every sample is semantically, gramatically, or emotionally accurate.
 Running `driver.py` will output the user with the most semantically, gramatically, and emotionally correct sample from the n outputs.
 
-To run this driver, just run ```python driver.py --emotion [chosen-emotion] --input [cond-text]```
+To get the best sample, just run 
+```bash
+python driver.py --emotion [chosen-emotion] --input [cond-text]```
 
 driver.py first combs through all the samples and removes extraneous words from ends of the samples.
 Then grammarbot, WordNet, and IBM Watson's Tone Analyzer are applied to all the samples.
