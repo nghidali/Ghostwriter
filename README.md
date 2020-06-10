@@ -107,7 +107,7 @@ A higher weight means the scale is more important. A higher score from all 3 met
 
 ## Tuning parameters for driver.py
 
-1. '--emotion' tells the driver which emotion to look for in the samples (choose between: )
+1. `--emotion` tells the driver which emotion to look for in the samples (choose between: )
 2. '--input' is the conditional text the user inputs when running run_pplm.py
 3. '--output_file' is the file where the outputs from PPLM are stored (run_pplm.py by default, stores the samples at samples.txt)
 4. --sa_weight is the weight of sentiment analysis. Increasing this will weight IBM Watson's tone analyzer more.
