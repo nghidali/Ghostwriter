@@ -84,3 +84,5 @@ python3 run_pplm.py -D generic --discrim_weights "generic_classifier_head_epoch_
 python3 run_pplm.py -D generic --discrim_weights "emotion.pt" --discrim_meta "emotion.json" --class_label 4 --cond_text "My dog died" --length 50 --gamma 1.0 --num_iterations 10 --num_samples 10 --stepsize 0.04 --kl_scale 0.01 --gm_scale 0.95 --sample
 ```
 The class label is  { 0: no emotion, 1: anger, 2: disgust, 3: fear, 4: happiness, 5: sadness, 6: surprise}
+
+### Choosing the Best Sample
