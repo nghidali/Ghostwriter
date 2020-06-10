@@ -94,6 +94,10 @@ To get the best sample, just run
 ```bash
 python driver.py --emotion [chosen-emotion] --input [cond-text]
 ```
+Example:
+```bash
+python driver.py --emotion "fear" --input "Mom: Do you want to go on the roller coaster? Son: "
+```
 
 ### How driver.py works
 
