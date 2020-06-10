@@ -37,7 +37,6 @@ def get_synsets(sentence):
             synset = wn.synsets(item[0], item[1])
             if len(synset) > 0:
                 synsets_lst.append(synset[0])
-                print(synset)
 
     return synsets_lst
 
@@ -79,13 +78,10 @@ def get_most_similar(focus_sentence):
 
     for line in lines:
         if line[0] != '\n':
-            print("\n \n SAMPLE {} ... {}: \n \n".format(i, line))
             similarities.append(get_similarity(focus_sentence, line))
             sentences.append(line)
             i+=1
 
     idx = np.argmax(similarities)
-
-    print("\n \n ------------- most similar: {} ------------ \n \n".format(sentences[idx]))
 
     return similarities # return list
