@@ -119,3 +119,5 @@ Grammar is weighted much lower that the other weights because the sentences are 
 
 ### WordNet - Semantic Similarity
 
+Code for calculating semantic similarity is based off of https://nlpforhackers.io/wordnet-sentence-similarity/
+
