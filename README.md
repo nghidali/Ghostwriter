@@ -88,32 +88,34 @@ The class label is  { 0: no emotion, 1: anger, 2: disgust, 3: fear, 4: happiness
 ## Choosing the Best Sample with driver.py
 
 When running PPLM, the user decides how many samples to output. Not every sample is semantically, gramatically, or emotionally accurate.
-Running `driver.py` will output the user with the most semantically, gramatically, and emotionally correct sample from the n outputs.
+Running `driver.py` will print the most semantically, gramatically, and emotionally correct sample from the n outputs.
 
 To get the best sample, just run 
 ```bash
 python driver.py --emotion [chosen-emotion] --input [cond-text]
 ```
 
+### How driver.py works
+
 driver.py first combs through all the samples and removes extraneous words from ends of the samples.
-Then grammarbot, WordNet, and IBM Watson's Tone Analyzer are applied to all the samples.
-We get scores from all 3 systems and normalize the weights before applying weights.
+Then Grammarbot, WordNet, and IBM Watson's Tone Analyzer are applied to all the samples.
+Each sample gets a score from the 3 applications - a higher score is better. Then all 3 scores are normalized. The normalized scores are multiplied by a specific weight and all 3 scores are summed together to give each sample a rating. The sample with the highest rating is printed.
 
 The default weights are:
 1. Sentiment Analysis = 1
 2. Semantic Similarity = 0.8
 3. Grammar = 0.3
 
-Grammar is weighted much lower that the other weights because the sentences are corrected for grammar and are returned. Therefore, we are focused more on how emotional and related the samples are to the conditional text input.
-
-A higher weight means the scale is more important. A higher score from all 3 metrics means the sample is more accurate.
+Grammar is weighted much lower that the other weights because the sentences are corrected for grammar before applying the scoring mechanism. Therefore, we are focused more on how emotional and related the samples are to the conditional text input.
 
 ### Tuning parameters for driver.py
 
-1. `--emotion` tells the driver which emotion to look for in the samples (choose between: )
+1. `--emotion` tells the driver which emotion to look for in the samples.
 2. `--input` is the conditional text the user inputs when running run_pplm.py
 3. `--output_file` is the file where the outputs from PPLM are stored (run_pplm.py by default, stores the samples at samples.txt)
 4. `--sa_weight` is the weight of sentiment analysis. Increasing this will weight IBM Watson's tone analyzer more.
 5. `--semantic_weight` is the weight of WordNet. Increasing this will weight semantic similarity more.
 6. `--grammar_weight` is the weight of Grammarbot. Increasing this will weight grammar accruacy more.
+
+### WordNet - Semantic Similarity
 
