@@ -108,9 +108,7 @@ Each sample gets a score from the 3 applications - a higher score is better. The
 The default weights are:
 1. Sentiment Analysis = 1
 2. Semantic Similarity = 0.8
-3. Grammar = 0.3
-
-Grammar is weighted much lower that the other weights because the sentences are corrected for grammar before applying the scoring mechanism. Therefore, we are focused more on how emotional and related the samples are to the conditional text input.
+3. Grammar = 0.8
 
 ### Tuning parameters for driver.py
 
