@@ -7,7 +7,7 @@ from watson_choose import choose_best_emotion
 
 def driver(output_file, input, emotion, grammar_weight, semantic_weight, sa_weight):
 
-    print("\n \n EMOTION : {} \n \n".format(emotion))
+    print("\n \nBegin Choosing Best Example with Emotion : {}".format(emotion))
     # remove words after end of sentence
     clean_up_samples(output_file)
 
@@ -21,16 +21,20 @@ def driver(output_file, input, emotion, grammar_weight, semantic_weight, sa_weig
 
     # get weights
     grammar_result = get_grammar(file)
-    grammar_weights =  [i[0] for i in grammar_result]#[grammar_weight * i[0] for i in grammar_result]
-    semantic_weights = [i for i in get_most_similar(input)] #[i * semantic_weight for i in get_most_similar(input)]
-    sa_weights = [i for i in choose_best_emotion(output_file, emotion)]#[i * sa_weight for i in choose_best_emotion(output_file, emotion)]
+    grammar_weights =  [i[0] for i in grammar_result]
+    print("\n Finished Calculating Grammar Scores")
+    semantic_weights = [i for i in get_most_similar(input)]
+    print("\n Finished Calculating Semantic Similarity Scores")
+    sa_weights = [i for i in choose_best_emotion(output_file, emotion)]
+    print("\n Finished Calculating Sentiment Analysis Scores")
 
+    max_sa = max(sa_weights)
+    if max_sa == 0:
+        max_sa = 1
 
-    norm_sa_weights =  [i/max(sa_weights) for i in sa_weights]
+    norm_sa_weights =  [i/max_sa for i in sa_weights]
     norm_semantic_weights = [i/max(semantic_weights) for i in semantic_weights]
     norm_grammar_weights = [i/max(grammar_weights) for i in grammar_weights]
-
-    #print('\n \n weights : sa {} .. \n semantic {} .. \n grammar {} \n \n'.format(norm_sa_weights, norm_semantic_weights, norm_grammar_weights))
 
     total = []
 
@@ -43,10 +47,11 @@ def driver(output_file, input, emotion, grammar_weight, semantic_weight, sa_weig
 
     idx = np.argmax(total)
 
-    print("\n --------------- Total Scores: {}".format(total))
-    print("\n ---------------- Weights: \n Grammar Weight: {} \n Semantic Weight: {} \n SA Weight: {} \n".format(grammar_weight, semantic_weight, sa_weight))
+    #print(total)
 
-    print("\n \n ---------------------- at index {} ... BEST RESULT \n {} ----------------------------\n \n".format(idx, lines[idx]))
+    print("\nWeights: \n Grammar Weight: {} \n Semantic Weight: {} \n SA Weight: {} \n".format(grammar_weight, semantic_weight, sa_weight))
+
+    print("\n \n ---------------------- The BEST SAMPLE is: \n {} \n \n".format(lines[idx]))
 
     return lines[idx]
 
@@ -86,7 +91,6 @@ def clean_up_samples(file):
 
 
 # run driver
-#driver("samples.txt","my dog dies", "1, 1, 1)
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -102,15 +106,15 @@ if __name__ == '__main__':
         help="One of: anger, fear, joy, sadness, analytical, confident, tentative"
     )
     parser.add_argument(
-        "--grammar_weight", type=float, default= 0.8, #1
+        "--grammar_weight", type=float, default= 0.5, #1
         help="weight of grammarbot"
     )
     parser.add_argument(
-        "--semantic_weight", type=float, default=1, #.9
+        "--semantic_weight", type=float, default=0.8, #.9
         help="weight of semantic similarity"
     )
     parser.add_argument(
-        "--sa_weight", type=float, default=0.8, #.8
+        "--sa_weight", type=float, default=1, #.8
         help="weight of sentiment analysis"
     )
 

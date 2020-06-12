@@ -31,8 +31,8 @@ def choose_best_emotion(text_file, emotion):
                     best_score = el['score']
                     best_sentence = sentences[sentence]
 
-    print('\n \n The winner is:', best_sentence)
-    print('\n \n emotion: {} \n \n'.format(emotion))
+    #print('\n \n The winner is:', best_sentence)
+    #print('\n \n emotion: {} \n \n'.format(emotion))
 
     return scores
 
